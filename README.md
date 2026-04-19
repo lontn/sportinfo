@@ -89,12 +89,12 @@ http://localhost:8080/swagger-ui/index.html
 
 ## Demo Screenshots
 
+以下為建議展示項目：
+
 - Dashboard
 - Radar Chart
 - Heatmap
 - Scatter Plot
-
-你可以在這一段放 GitHub 圖片連結或 `screenshots` 資料夾截圖。
 
 ## Future Improvements
 
@@ -103,22 +103,15 @@ http://localhost:8080/swagger-ui/index.html
 - 加入部署環境設定
 - 支援更多進階棒球指標
 
-## Author
-
-- Your Name
-- GitHub: 你的 GitHub 連結
-
 ---
 
-## 前端 README 建議版
+## 附錄：Frontend README 範本
 
-你目前 `README.md` 可以往這個方向調整。前端 README 應該更聚焦在畫面、執行方式、對接後端，而不是再講完整系統架構一次。
-
-# WBC Analytics Frontend
+### WBC Analytics Frontend
 
 這是 SportInfo 平台的前端應用，負責呈現 MLB 與 WBC 球員數據分析結果，提供儀表板、雷達圖、比較圖與其他圖表元件，讓使用者能以視覺化方式快速理解球員表現。
 
-## Features
+#### Features
 
 - 球員數據儀表板
 - 球員能力雷達圖
@@ -126,7 +119,7 @@ http://localhost:8080/swagger-ui/index.html
 - 多種圖表小工具整合
 - 球隊資料與球員名單查詢
 
-## Tech Stack
+#### Tech Stack
 
 - React 19
 - Vite
@@ -135,15 +128,15 @@ http://localhost:8080/swagger-ui/index.html
 - Axios
 - Lucide React
 
-## Development Setup
+#### Development Setup
 
-### 安裝依賴
+##### 安裝依賴
 
 ```bash
 npm install
 ```
 
-### 啟動開發環境
+##### 啟動開發環境
 
 ```bash
 npm run dev
@@ -155,13 +148,13 @@ npm run dev
 http://localhost:5173
 ```
 
-### 建置正式版本
+##### 建置正式版本
 
 ```bash
 npm run build
 ```
 
-## Backend Requirement
+#### Backend Requirement
 
 本專案需要搭配 Spring Boot 後端 API 執行。請先確認後端服務已啟動於：
 
@@ -169,7 +162,7 @@ npm run build
 http://localhost:8080
 ```
 
-## Environment Variables
+#### Environment Variables
 
 建議使用環境變數管理 API 位址，例如：
 
@@ -179,7 +172,7 @@ VITE_API_BASE_URL=http://localhost:8080/api/v1
 
 之後可讓前端統一透過環境變數切換本機、測試與正式環境。
 
-## Project Structure
+#### Project Structure
 
 ```text
 src/
@@ -191,35 +184,27 @@ src/
 └── main.jsx
 ```
 
-## Main Components
+#### Main Components
 
 - PlayerDashboard
 - PlayerRadarChart
 - PlayerComparisonChart
 - PlayerChartWidgets
 
-## Notes
+#### Notes
 
 - 目前前端主要透過後端 API 取得球員雷達圖、圖表資料與球隊名單資訊
 - 若後端未啟動，部分功能將無法正常顯示
 
-這份前端 README 跟你目前版本相比，差別在於：
-
-- 補了前端依賴後端服務這件事
-- 補了環境變數方向
-- 更適合放在完整全端專案底下
-
 ---
 
-## 後端 README 建議版
+## 附錄：Backend README 範本
 
-你附的後端 README 其實已經有不少內容了，但如果要放到 GitHub 展示，建議整理成更清楚的工程文件風格。
-
-# SportInfo Backend
+### SportInfo Backend
 
 這是 SportInfo 平台的後端服務，基於 Spring Boot 建立，負責整合 MLB 資料來源、處理球員分析邏輯，並透過 RESTful API 提供前端使用。
 
-## Features
+#### Features
 
 - MLB 球隊名單查詢
 - 球員雷達圖數據計算
@@ -228,7 +213,7 @@ src/
 - 投手球種使用比例分析
 - Swagger API 文件整合
 
-## Tech Stack
+#### Tech Stack
 
 - Spring Boot 3
 - Java 21
@@ -240,15 +225,15 @@ src/
 - Jackson
 - SpringDoc OpenAPI
 
-## Run Application
+#### Run Application
 
-### 建置專案
+##### 建置專案
 
 ```bash
 mvn clean install
 ```
 
-### 啟動專案
+##### 啟動專案
 
 ```bash
 mvn spring-boot:run
@@ -260,7 +245,7 @@ mvn spring-boot:run
 http://localhost:8080
 ```
 
-## Swagger
+#### Swagger
 
 API 文件位址：
 
@@ -268,13 +253,13 @@ API 文件位址：
 http://localhost:8080/swagger-ui/index.html
 ```
 
-## API Base Path
+#### API Base Path
 
 ```text
 /api/v1
 ```
 
-## Example Endpoints
+#### Example Endpoints
 
 - `GET /api/v1/teams/{teamId}/roster`
 - `GET /api/v1/players/{id}/radar`
@@ -283,18 +268,18 @@ http://localhost:8080/swagger-ui/index.html
 - `GET /api/v1/players/{id}/charts/trend`
 - `GET /api/v1/players/{id}/charts/usage`
 
-## Data Source
+#### Data Source
 
 本系統部分資料來自 MLB Stats API，並在後端進行資料整合與格式轉換後提供給前端使用。
 
-## Frontend Integration
+#### Frontend Integration
 
 前端預期透過 HTTP 呼叫本後端服務，建議於本機開發時搭配：
 
 - Frontend: `http://localhost:5173`
 - Backend: `http://localhost:8080`
 
-## Configuration
+#### Configuration
 
 主要設定可放置於 `application.yaml`，例如：
 
@@ -303,7 +288,7 @@ http://localhost:8080/swagger-ui/index.html
 - logging level
 - CORS 設定
 
-## Future Work
+#### Future Work
 
 - 增加快取機制
 - 支援更多球員進階指標
