@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: sportinfo
+
+mlb:
+  api:
+    base-url: "https://statsapi.mlb.com/api/v1/people/"
+    roster-url-template: "https://statsapi.mlb.com/api/v1/teams/{teamId}/roster"
+    season: 2025 # 新增：賽季年份
+    hydrate-params:
+      group: "[hitting]" # 新增：數據群組
+      type: "[season]" # 新增：數據類型
+
+logging:
+  level:
+    root: INFO
+    com.wbc.analytics.sportinfo: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: INFO
+  file:
+    name: logs/sportinfo-app.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB #單一檔案最大 10MB
+      max-history: 7 #保留最近 7 天的日誌檔案
+      total-size-cap: 100MB #總日誌檔案大小上限

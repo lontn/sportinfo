@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  /* 定義 WBC 經典藍與雷達圖專用的亮藍色 */
+  --color-wbc-dark: #0f172a;
+  --color-wbc-accent: #38bdf8;
+  --color-wbc-glow: rgba(56, 189, 248, 0.2);
+}
