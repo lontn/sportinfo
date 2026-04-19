@@ -89,7 +89,7 @@ http://localhost:8080/swagger-ui/index.html
 
 ## Demo Screenshots
 
-以下為建議展示項目：
+以下為預計補上的展示項目：
 
 - Dashboard
 - Radar Chart
@@ -193,8 +193,8 @@ src/
 
 #### Notes
 
-- 目前前端主要透過後端 API 取得球員雷達圖、圖表資料與球隊名單資訊
-- 若後端未啟動，部分功能將無法正常顯示
+- 目前前端主要透過後端 API 取得球員雷達圖、圖表資料與球隊名單資訊。
+- 若後端未啟動，部分功能將無法正常顯示。
 
 ---
 
